@@ -11,7 +11,7 @@ namespace TextAdventureEngine.Verbs
 
         public bool Means(string word)
         {
-            return new[] { "pick", "grab", "take" }.Contains(word.ToLowerInvariant());
+            return new[] { "pick up", "grab", "take", "snatch" }.Contains(word.ToLowerInvariant());
         }
 
         public void Do(TextAdventureEngine.Objects.GameObject verbSubject, TextAdventureEngine.Objects.GameObject verbObject, TextAdventureEngine.State.GameState state)

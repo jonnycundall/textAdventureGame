@@ -15,8 +15,8 @@ namespace TextAdventureEngineTests
         [TestMethod]
         public void ShouldFindVerbWhenInitialized()
         {
-            var repo = new VerbRepository(new List<IVerb> {new Go() });
-            var verb = repo.FindVerb("go", "north");
+            var repo = new VerbRepository(new List<IVerb> { new Go() });
+            var verb = repo.FindMatch(new UnknownWord("go"));
             Assert.IsInstanceOfType(verb, typeof(Go));
         }
 
@@ -24,7 +24,7 @@ namespace TextAdventureEngineTests
         public void ShouldRegisterTheTwoWordsPickUpAsOneVerb()
         {
             var repo = new VerbRepository(new List<IVerb> { new PickUp() });
-            var verb = repo.FindMatch(new Pair<IWord,IWord>(new UnknownWord("pick"),new UnknownWord("up")));
+            var verb = repo.FindMatch(new Pair<IWord, IWord>(new UnknownWord("pick"), new UnknownWord("up")));
             Assert.IsInstanceOfType(verb, typeof(PickUp));
         }
     }
