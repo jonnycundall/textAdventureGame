@@ -9,7 +9,12 @@ using TextAdventureEngine.Locations;
 
 namespace TextAdventureEngine.State
 {
-    public class GameState
+    public interface IGameState
+    {
+        GameObject GetObject(string objectName);
+    }
+
+    public class GameState : IGameState
     {
         public GameState()
         {

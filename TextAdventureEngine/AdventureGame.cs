@@ -5,6 +5,7 @@ using System.Text;
 using TextAdventureEngine.State;
 using TextAdventureEngine.Parsing;
 using TextAdventureEngine.Verbs;
+using System.Diagnostics.Contracts;
 
 namespace TextAdventureEngine
 {

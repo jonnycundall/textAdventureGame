@@ -69,5 +69,20 @@ namespace TextAdventureEngine
 
         public T First { get; set; }
         public U Second { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Pair<T, U>))
+                return false;
+
+            var otherPair = obj as Pair<T,U>;
+            return First.Equals(otherPair.First)
+                && Second.Equals(otherPair.Second);
+        }
+
+        public override int GetHashCode()
+        {
+            return First.GetHashCode() * Second.GetHashCode();
+        }
     };
 }

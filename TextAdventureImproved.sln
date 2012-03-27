@@ -1,17 +1,17 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventureImproved", "TextAdventureImproved\TextAdventureImproved.csproj", "{839D9F8D-A090-4430-A0C8-A05D5EB0D4B5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventureEngine", "TextAdventureEngine\TextAdventureEngine.csproj", "{52AA34BC-2178-4E57-A04E-3219868C1C6F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventureEngineTests", "TextAdventureEngineTests\TextAdventureEngineTests.csproj", "{004E2E9D-150D-4D1F-BCEE-CD5ACE6A5715}"
-EndProject
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{33ECFADA-1619-46C7-9DAF-FD401C939D6C}"
 	ProjectSection(SolutionItems) = preProject
 		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
 		TextAdventureImproved.vsmdi = TextAdventureImproved.vsmdi
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventureImproved", "TextAdventureImproved\TextAdventureImproved.csproj", "{839D9F8D-A090-4430-A0C8-A05D5EB0D4B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventureEngine", "TextAdventureEngine\TextAdventureEngine.csproj", "{52AA34BC-2178-4E57-A04E-3219868C1C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextAdventureEngineTests", "TextAdventureEngineTests\TextAdventureEngineTests.csproj", "{004E2E9D-150D-4D1F-BCEE-CD5ACE6A5715}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MineAdventure", "MineAdventure\MineAdventure.csproj", "{64A0877F-4186-44AA-A13E-E72965E3E6E2}"
 EndProject

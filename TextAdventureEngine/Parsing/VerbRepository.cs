@@ -59,12 +59,12 @@ namespace TextAdventureEngine.Parsing
 
         public IVerb FindMatch(Pair<IWord, IWord> wordPair)
         {
-            return _verbs.First(verb => verb.Means(string.Format("{0} {1}", wordPair.First.Word, wordPair.Second.Word)));
+            return _verbs.FirstOrDefault(verb => verb.Means(string.Format("{0} {1}", wordPair.First.Word, wordPair.Second.Word)));
         }
 
         public IVerb FindMatch(IWord word)
         {
-            return _verbs.First(verb => verb.Means(word.Word));
+            return _verbs.FirstOrDefault(verb => verb.Means(word.Word));
         }
     }
 

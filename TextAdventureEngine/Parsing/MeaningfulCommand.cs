@@ -8,8 +8,7 @@ using TextAdventureEngine.Objects;
 
 namespace TextAdventureEngine.Parsing
 {
-    public class MeaningfulCommand
-    {
+    public class MeaningfulCommand{
         public IVerb Verb
         {
             get; private set;

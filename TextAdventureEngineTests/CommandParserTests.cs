@@ -32,7 +32,7 @@ namespace TextAdventureEngineTests
         [TestMethod]
         public void ShouldUseVerbsFromVerbRepo()
         {
-            verbRepository.Stub(vr => vr.FindVerb("go north")).Return(new Go());
+            verbRepository.Stub(vr => vr.FindMatch(new UnknownWord("go"))).Return(injectedVerb);
             
             var parser = new CommandParser(verbRepository, gameState);
             var meaningfulCommmand = parser.Parse("go north");
@@ -43,12 +43,24 @@ namespace TextAdventureEngineTests
         public void ShouldGetOtherWordsToBeObjectAndTool()
         {
             injectedVerb.Stub(v => v.Means("slap")).Return(true);
-            verbRepository.Stub(vr => vr.FindVerb("slap belly with slapper")).Return(injectedVerb);
+            verbRepository.Stub(vr => vr.FindMatch(new UnknownWord("slap"))).Return(injectedVerb);
 
             var parser = new CommandParser(verbRepository, gameState);
-            var meaningfulCommmand = parser.Parse("slap belly with slapper");
+            var meaningfulCommmand = (MeaningfulCommand)parser.Parse("slap belly with slapper");
             Assert.AreEqual("belly", meaningfulCommmand.VerbObject);
             Assert.AreEqual("slapper", meaningfulCommmand.VerbTool);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(CouldNotUnderstandException))]
+        public void ShouldErrorWhenNonsenseEntered()
+        {
+            verbRepository.Stub(vr => vr.FindMatch(Arg<IWord>.Is.Anything)).Return(null);
+            verbRepository.Stub(vr => vr.FindMatch(Arg<Pair<IWord,IWord>>.Is.Anything)).Return(null);
+            var parser = new CommandParser(verbRepository, gameState);
+            var meaningfulCommmand = parser.Parse("foo bar baz");
+
+            Assert.IsNotNull(meaningfulCommmand);
         }
 
         [TestMethod]
@@ -75,7 +87,7 @@ namespace TextAdventureEngineTests
             var parser = new CommandParser(verbRepository, gameState);
             var meaningfulCommmand = parser.Parse("pick up shovel");
 
-            Assert.AreEqual("shovel", meaningfulCommmand.VerbObject.Name);
+            Assert.AreEqual("shovel", ((MeaningfulCommand)meaningfulCommmand).VerbObject.Name);
         }
 
         public class Shovel : GameObject

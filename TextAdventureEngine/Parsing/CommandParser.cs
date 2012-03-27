@@ -21,6 +21,7 @@ namespace TextAdventureEngine.Parsing
 
         public MeaningfulCommand Parse(string userInput)
         {
+            
             var asWords = userInput.Split(' ').Select(str => new UnknownWord(str)).Cast<IWord>();
 
             var twoWordWindow = asWords.AdjacentPairs();
@@ -47,7 +48,7 @@ namespace TextAdventureEngine.Parsing
                 }
             }
 
-            return null;
+            throw new CouldNotUnderstandException();
         }
 
         private GameObject GetFirstMatchingObject(IEnumerable<IWord> words)
@@ -81,13 +82,13 @@ namespace TextAdventureEngine.Parsing
         public override bool Equals(object obj)
         {
             if (obj is IWord)
-                return ((IWord)obj).Word == _userWord;
+                return ((IWord)obj).Word == Word;
             return false;
         }
 
         public override int GetHashCode()
         {
-            return _userWord.GetHashCode();
+            return Word.GetHashCode();
         }
 
         private string _userWord;
@@ -103,5 +104,9 @@ namespace TextAdventureEngine.Parsing
     public class With : IWord
     {
         public string Word { get { return "with"; } }
+    }
+
+    public class CouldNotUnderstandException : Exception
+    {
     }
 }

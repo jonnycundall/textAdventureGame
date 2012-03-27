@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="TextAdventureImproved">
+</Property><Property Name="Solution File" Value="C:\git\textAdventureGame\TextAdventureImproved.sln">
+</Property><Property Name="Date" Value="17 March 2012">
+</Property><Property Name="Time" Value="07:35">
+</Property></Properties><Event ErrorLevel="0" Project="TextAdventureImproved" Source="TextAdventureImproved\TextAdventureImproved.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TextAdventureImproved" Source="TextAdventureImproved\TextAdventureImproved.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="TextAdventureEngine" Source="TextAdventureEngine\TextAdventureEngine.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TextAdventureEngine" Source="TextAdventureEngine\TextAdventureEngine.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="TextAdventureEngineTests" Source="TextAdventureEngineTests\TextAdventureEngineTests.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="TextAdventureEngineTests" Source="TextAdventureEngineTests\TextAdventureEngineTests.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="MineAdventure" Source="MineAdventure\MineAdventure.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="MineAdventure" Source="MineAdventure\MineAdventure.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="TextAdventureImproved.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="TextAdventureImproved.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="TextAdventureImproved" Source="TextAdventureImproved\TextAdventureImproved.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="TextAdventureEngine" Source="TextAdventureEngine\TextAdventureEngine.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="3" Project="" Source="LocalTestRun.testrunconfig" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="LocalTestRun.testrunconfig" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="3" Project="" Source="TextAdventureImproved.vsmdi" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="TextAdventureImproved.vsmdi" Description="The file was converted to the current format.">
+</Event><Event ErrorLevel="0" Project="TextAdventureEngineTests" Source="TextAdventureEngineTests\TextAdventureEngineTests.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event><Event ErrorLevel="0" Project="MineAdventure" Source="MineAdventure\MineAdventure.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
